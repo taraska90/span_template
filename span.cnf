@@ -1,0 +1,17 @@
+
+
+monitor session 10 type erspan-source 
+    description span_source
+    source interface Gi0/0/0 
+    destination 
+      erspan-id 10
+      ip address 10.1.1.1 
+      origin ip address 10.1.1.1 
+! 
+! 
+monitor session 20 type erspan-destination 
+    description span_dest 
+    destination interface Gi0/0/3 
+    source 
+     erspan-id 10
+     ip address 10.1.1.1
